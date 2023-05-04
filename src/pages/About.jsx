@@ -1,10 +1,10 @@
 import React from "react";
 
 const About = () => {
+  const token = localStorage.getItem("token");
+
   return (
-    <div>
-      About
-    </div>
+    <div>{token ? <>About</> : <>{(window.location.href = "/login")}</>}</div>
   );
 };
 
